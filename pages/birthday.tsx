@@ -36,8 +36,8 @@ const Birthday: NextPage = () => {
           </p>
           <p>At the bottom of this page are five little boxes, each of which contain a cheeky wee birthday treat.</p>
           <strong>
-            Think of this as an Advent Calendar for your b'day. So, only click on the appropriate box for that day. No
-            cheating, or I'll know 👮🏻
+            Think of this as an Advent Calendar for your b&#39;day. So, only click on the appropriate box for that day.
+            No cheating, or I&#39;ll know 👮🏻
           </strong>
           <p className={styles.description}>
             <strong>
