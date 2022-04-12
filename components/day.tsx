@@ -2,17 +2,22 @@ import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
 const Day = ({ dayNum, date }) => {
-  const [isDone, setIsDone] = useState(false);
+  const TODAY = new Date();
+  const D = new Date(date);
+  const [isDone, setIsDone] = useState(D.getTime() <= TODAY.getTime());
   if (isDone)
     return (
-      <aside>
-        <h2 className={styles.card}>DAY is DONE</h2>
-      </aside>
+      <div className={styles.card}>
+        <h2>Day {dayNum} &rarr;</h2>
+        <p>📅{date}</p>
+        <div className={styles.strokeleft} />
+        <div className={styles.strokeright} />
+      </div>
     );
   return (
     <>
-      <a href='/day/{dayNum}' className={styles.card}>
-        <h2>Day {dayNum} &rarr;</h2>
+      <a href={'/day/'+dayNum} className={styles.card}>
+        <h2>Day {dayNum} &rarr;< /h2>
         <p>📅{date}</p>
       </a>
     </>

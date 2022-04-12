@@ -4,6 +4,11 @@
   background-color: #121223;
   width: auto;
   height: 100vh;
+  display: block;
+}
+
+.headerInage {
+  max-height: 100vh;
 }
 
 .container {
@@ -87,6 +92,10 @@
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin: 1rem;
   padding: 1.5rem;
   text-align: center;
@@ -96,6 +105,8 @@
   border-radius: 16px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover,
@@ -114,6 +125,22 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
+}
+
+.strokeleft,
+.strokeright {
+  position: absolute;
+  content: ' ';
+  height: 20%;
+  width: 300px;
+  background-color: rgba(206, 70, 28, 0.5);
+}
+
+.strokeright {
+  transform: rotate(45deg);
+}
+.strokeleft {
+  transform: rotate(-45deg);
 }
 
 .logo {
