@@ -1,9 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
+import { Props, ScriptProps } from 'next/script';
 import styles from '../styles/Home.module.css';
 
-const DayOfWeek: NextPage = ({ dayNum, imageHref }) => {
+interface DayOfWeekProps {
+  dayNum: number;
+  imageHref: string;
+}
+
+const DayOfWeek: NextPage<DayOfWeekProps> = ({ dayNum, imageHref }) => {
   return (
     <>
       <Head>
@@ -12,7 +18,7 @@ const DayOfWeek: NextPage = ({ dayNum, imageHref }) => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <header className={styles.header}>
-        <Image src='/bday.png' layout='fill' objectFit='contain' />
+        <Image src='/bday.png' layout='fill' objectFit='contain' alt='Happy Birthday Baby' />
       </header>
       <main className={styles.maim}>
         <div className={styles.container}>
@@ -29,8 +35,8 @@ const DayOfWeek: NextPage = ({ dayNum, imageHref }) => {
           <h2>How does this work?</h2>
           <p>
             <strong>My dearest Nicola, </strong>over the next five days you will have the opportunity to win a selection
-            of birthday gifts. There are a number of great gifts on offer here but you have to wait for them. We can't
-            go spoiling you now, can we dahling?
+            of birthday gifts. There are a number of great gifts on offer here but you have to wait for them. We
+            can&#39;t go spoiling you now, can we dahling?
           </p>
           <p>At the bottom of this page are five little boxes, each of which contain a birthday</p>
           <p className={styles.description}>
@@ -38,31 +44,7 @@ const DayOfWeek: NextPage = ({ dayNum, imageHref }) => {
               Happy Birthday <i>Baby!</i> 🥳
             </strong>
           </p>
-          <div className={styles.grid}>
-            <Day dayNum={1} date={'2022-04-14'} />
-            <a href='https://nextjs.org/learn' className={styles.card}>
-              <h2>Day 2 &rarr;</h2>
-              <p>14/04/2022</p>
-            </a>
-
-            <a href='https://github.com/vercel/next.js/tree/canary/examples' className={styles.card}>
-              <h2>Day 3 &rarr;</h2>
-              <p>15/04/2022</p>
-            </a>
-
-            <a
-              href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-              className={styles.card}>
-              <h2>Day 4 &rarr;</h2>
-              <p>16/04/2022</p>
-            </a>
-            <a
-              href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-              className={styles.card}>
-              <h2>Day 5 &rarr;</h2>
-              <p>17/04/2022</p>
-            </a>
-          </div>
+          <div className={styles.grid}></div>
         </div>
       </main>
 

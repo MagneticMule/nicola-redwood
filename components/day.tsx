@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 
-const Day = ({ dayNum, date }) => {
+const Day = ({ dayNum, date }: { dayNum: number; date: string }) => {
   const TODAY = new Date();
   const D = new Date(date);
   const [isDone, setIsDone] = useState(D.getTime() <= TODAY.getTime());
@@ -16,8 +16,8 @@ const Day = ({ dayNum, date }) => {
     );
   return (
     <>
-      <a href={'/day/'+dayNum} className={styles.card}>
-        <h2>Day {dayNum} &rarr;< /h2>
+      <a href={'/day/' + dayNum} className={styles.card}>
+        <h2>Day {dayNum} &rarr;</h2>
         <p>📅{date}</p>
       </a>
     </>

@@ -14,7 +14,7 @@ const Birthday: NextPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <header className={styles.header}>
-        <Image src='/bday.png' layout='fill' objectFit='contain' />
+        <Image src='/bday.png' layout='fill' objectFit='contain' alt='Happy Birthday Nicola' />
       </header>
       <main className={styles.maim}>
         <div className={styles.container}>
@@ -31,8 +31,8 @@ const Birthday: NextPage = () => {
           <h2>How does this work?</h2>
           <p>
             <strong>My dearest Nicola, </strong>over the next five days you will have the opportunity to win a selection
-            of birthday gifts. There are a number of great gifts on offer here but you have to wait for them. We can't
-            go spoiling you now, can we dahling?
+            of birthday gifts. There are a number of great gifts on offer here but you have to wait for them. We
+            can&#39;t go spoiling you now, can we dahling?
           </p>
           <p>At the bottom of this page are five little boxes, each of which contain a cheeky wee birthday treat.</p>
           <p className={styles.description}>
@@ -42,7 +42,7 @@ const Birthday: NextPage = () => {
           </p>
           <div className={styles.grid}>
             {DayData.map((day, index) => (
-              <Day dayNum={index + 1} date={new Date(day.date).toLocaleString('en-GB').slice(0, -10)} />
+              <Day key={index} dayNum={index + 1} date={new Date(day.date).toLocaleString('en-GB').slice(0, -10)} />
             ))}
           </div>
         </div>
