@@ -16,7 +16,7 @@ const Day = ({ dayNum, date }: { dayNum: number; date: string }) => {
     );
   return (
     <>
-      <a href={'/day/' + dayNum} className={styles.card}>
+      <a href={'/birthday/' + dayNum} className={styles.card}>
         <h2>Day {dayNum} &rarr;</h2>
         <p>📅{date}</p>
       </a>

@@ -14,11 +14,13 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
+        <strong>Gift 1 of 5</strong>
         <h1 className={styles.title}>Hello Nicola!</h1>
         <h2>This is your new website 😊</h2>
+        <h3>NICOLAREDWOOD.COM</h3>
 
         <p className={styles.description}>
-          You also have a nice new email address{' '}
+          You also have a nice new email address <br />
           <a className={styles.emph} href='mailto@nic@nicolaredwood.com'>
             📧 nic@nicolaredwood.com
           </a>
