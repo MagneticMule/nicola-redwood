@@ -19,12 +19,12 @@ const Birthday: NextPage = () => {
       <main className={styles.maim}>
         <div className={styles.container}>
           <h2>📅 Forty-Five years of living</h2>
+          <h2>🥳 Five days of surprises</h2>
           <h2>
             <strong>👩🏻‍🦱One gorgeous woman</strong>
           </h2>
-          <h2>🥳 Five days of surprises</h2>
           <hr />
-          <h2>How does this work?</h2>
+          <h1>How does this work?</h1>
           <p>
             <strong>My dearest Nicola, </strong>over the next five days you will have the opportunity to win a selection
             of birthday gifts. There are a number of great gifts on offer here but you have to wait for them. We
