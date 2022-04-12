@@ -18,15 +18,11 @@ const Birthday: NextPage = () => {
       </header>
       <main className={styles.maim}>
         <div className={styles.container}>
-          <h1>
-            📅 Forty-Five years of living
-            <strong>
-              <br />
-              👩🏻‍🦱One gorgeous woman
-            </strong>
-            <br />
-            🥳 Five days of surprises
-          </h1>
+          <h2>📅 Forty-Five years of living</h2>
+          <h2>
+            <strong>👩🏻‍🦱One gorgeous woman</strong>
+          </h2>
+          <h2>🥳 Five days of surprises</h2>
           <hr />
           <h2>How does this work?</h2>
           <p>
@@ -46,7 +42,7 @@ const Birthday: NextPage = () => {
           </p>
           <div className={styles.grid}>
             {DayData.map((day, index) => (
-              <Day key={index} dayNum={index + 1} date={new Date(day.date).toLocaleString('en-GB').slice(0, -10)} />
+              <Day key={index} dayNum={index + 1} date={day.date} />
             ))}
           </div>
         </div>
