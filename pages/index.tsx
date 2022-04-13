@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css';
+import BirthdayAnimation from '../components/birthday';
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
         <strong>Gift 1 of 5</strong>
         <h1 className={styles.title}>Hello Nicola!</h1>
         <h2>This is your new website 😊</h2>
+        <BirthdayAnimation />
         <h3>NICOLAREDWOOD.COM</h3>
 
         <p className={styles.description}>
