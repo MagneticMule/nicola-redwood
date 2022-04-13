@@ -30,7 +30,7 @@ const Birthday: NextPage = () => {
             <strong>My dearest Nicola, </strong>over the next five days you will have the opportunity to grab a
             selection of birthday gifts.
           </p>
-          <p>At the bottom of this page are five little boxes, each of which contain a cheeky wee birthday treat.</p>
+          <p>At the bottom of this page are five little boxes, each of which contains a cheeky wee birthday treat.</p>
           <strong>Think of this as an Advent Calendar for your b&#39;day.</strong>
           <p className={styles.description}>
             <strong>
