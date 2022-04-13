@@ -10,7 +10,7 @@ const Day = ({ dayNum, date }: { dayNum: number; date: string }) => {
   console.log(isToday);
   if (isDone)
     return (
-      <div className={styles.card}>
+      <div className={styles.card__inactive}>
         <h2>Day {dayNum} &rarr;</h2>
         <p>📅{new Date(date).toLocaleString('en-GB').slice(0, -10)}</p>
         <div className={styles.strokeleft} />
