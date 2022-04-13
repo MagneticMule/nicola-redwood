@@ -8,11 +8,11 @@ const BirthdayAnimation = () => {
     autoplay: true,
     animationData: animationData,
     rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
+      preserveAspectRatio: "xMidYMid",
     },
   };
 
-  return <Lottie options={defaultOptions} height={400} width={400} />;
+  return <Lottie options={defaultOptions} height={300} width={300} />;
 }
 
 export default BirthdayAnimation;
