@@ -5,7 +5,7 @@ const Day = ({ dayNum, date }: { dayNum: number; date: string }) => {
   const TODAY = new Date();
   const D = new Date(date);
 
-  const [isDone, setIsDone] = useState(D.getTime() <= TODAY.getTime());
+  const [isDone, setIsDone] = useState(D.getDate() < TODAY.getDate());
   const [isToday, setIsToday] = useState(D.getDate() === TODAY.getDate());
   console.log(isToday);
   if (isDone)
