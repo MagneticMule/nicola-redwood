@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import {DayData} from '../data/daydata';
-import { useState } from 'react';
+import { useContext } from 'react';
 import PresentContext from '../context/PresentContext';
 
 // interface DayOfWeekProps {
@@ -13,9 +13,10 @@ import PresentContext from '../context/PresentContext';
 // }
 
 const DayOfWeek: NextPage = () => {
-  const [dayNum, setDayNum] = useState(2);
+  const value = useContext(PresentContext);
+  const dayNum=value.dayNum;
+  console.log(dayNum);
   return (
-    <PresentContext.Provider value={{ dayNum, setDayNum }}>
     <>
       <Head>
         <title>Nicola Redwood: Five Days of 45 - Day {dayNum}</title>
@@ -37,7 +38,6 @@ const DayOfWeek: NextPage = () => {
         </a>
       </footer>
     </>
-    </PresentContext.Provider>
   );
 };
 

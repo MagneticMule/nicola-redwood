@@ -1,8 +1,5 @@
 import React from "react";
 
-const PresentContext = React.createContext({
-  dayNum: 1,
-  setDayNum: (num) => { }
-});
+const PresentContext = React.createContext();
 
 export default PresentContext;
