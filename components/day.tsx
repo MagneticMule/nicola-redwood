@@ -8,7 +8,6 @@ const Day = ({ dayNum, date }: { dayNum: number; date: string }) => {
   const D = new Date(date);
   const [isDone, setIsDone] = useState(D.getDate() < TODAY.getDate());
   const [isToday, setIsToday] = useState(D.getDate() === TODAY.getDate());
-
   const value = useContext(PresentContext);
   const setDayNum = value.setDayNum;
   const handleSetDay = () => {
